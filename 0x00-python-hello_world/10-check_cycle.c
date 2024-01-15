@@ -2,22 +2,21 @@
 #include <stdlib.h>
 
 /*
- * check_cycle - Check if there is a cycle in a node list
- * @list: the list to start from
+ * check_cycle - check if there is a cycle
+ * @list: the starting point
  * Return: 1 if true, 0 if false
  */
 int check_cycle(listint_t *list)
 {
 	listint_t *next;
-	listint_t *temp;
 
-	temp = list;
+	next = list;
 
-	while (list != NULL && (next = list->next) != NULL)
+	while (next != NULL)
 	{
-		list = next;
+		next = next->next;
 
-		if (list == temp)
+		if (next == list)
 			return (1);
 	}
 
