@@ -2,11 +2,9 @@
 def uppercase(s):
     i = 0
     n = len(s)
-
-    for char in s:
+    for c in s:
         i += 1
-        if 97 <= ord(char) <= 122:
-            print("{}".format(chr(ord(char) - 32)), end="" if i < n else "\n" * (n == 0))
+        if 97 <= ord(c) <= 122:
+            print("{}".format(chr(ord(c) - 32)), end="" if i < n else "\n")
         else:
-			print("{}".format(char), end="" if i < n else "\n" * (n == 0))
-			
+            print("{}".format(c), end="" if i < n else "\n")
