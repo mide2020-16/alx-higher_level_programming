@@ -1,11 +1,16 @@
 #include "lists.h"
 #include <stdlib.h>
 
+/**
+ * is_palindrome - a Function that ...
+ * @head: Description of head.
+ * Return: Description of the return value.
+ */
 int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
 	int *array, *array2;
-	int i= 0, j= 0, k, n, len = 0;
+	int i = 0, j = 0, k, n, len = 0;
 
 	while (current != NULL)
 	{
@@ -28,7 +33,7 @@ int is_palindrome(listint_t **head)
 	while (current != NULL)
 	{
 		array[i++] = current->n;
-		current = current->next;		
+		current = current->next;
 	}
 
 	for (k = i - 1; k >= 0; k--)
@@ -41,5 +46,6 @@ int is_palindrome(listint_t **head)
 			return (0);
 	}
 
-	return (1);	
+	return (1);
 }
+
