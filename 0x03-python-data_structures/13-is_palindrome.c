@@ -1,9 +1,9 @@
 #include "lists.h"
 #include <stdlib.h>
 
-int is_palindrome(lisint_t **head)
+int is_palindrome(listint_t **head)
 {
-	listint *current = *head;
+	listint_t *current = *head;
 	int *array, *array2;
 	int i= 0, j= 0, k, n, len = 0;
 
