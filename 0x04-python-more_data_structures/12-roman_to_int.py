@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
 
     # Creates the standard numerals and assigns their values
     roman_numerals = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
-                     'C': 100, 'D': 500, 'M': 1000}
+                      'C': 100, 'D': 500, 'M': 1000}
 
     # Set result and the evaluator to 0 initially
     result = 0
