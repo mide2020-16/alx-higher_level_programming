@@ -26,6 +26,7 @@ typedef struct dlistint_s
 
 
 /*Functions Used*/
+
 size_t dlistint_len(const dlistint_t *h);
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
