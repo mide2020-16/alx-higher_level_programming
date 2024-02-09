@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/HP/Desktop/alx-higher_level_programming/0x00-python-hello_world",
-      "program": "c:/Users/HP/Desktop/alx-higher_level_programming/0x00-python-hello_world/build/Debug/outDebug",
+      "cwd": "c:/Users/HP/Desktop/alx-higher_level_programming/0x06-python-classes",
+      "program": "c:/Users/HP/Desktop/alx-higher_level_programming/0x06-python-classes/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
