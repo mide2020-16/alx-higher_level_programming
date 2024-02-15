@@ -5,6 +5,12 @@
 class Rectangle:
         """A new class called Rectangle"""
 
+        def __init__(self, width=0, height=0):
+                """Initialzation of class"""
+
+                self.__width = width
+                self.__height = height
+
         @property
         def width(self):
                 """Width Getter"""
@@ -38,13 +44,6 @@ class Rectangle:
                 else:
                         self.__height = height
 
-
-        def __init__(self, width=0, height=0):
-                """Initialzation of class"""
-
-                self.__width = 0
-                self.__height = 0
-
         def area(self):
                 """Area of a rectangle"""
 
@@ -60,7 +59,7 @@ class Rectangle:
 
         def __str__(self):
                 """String representation for Rectangle"""
-                
+
                 if self.__width == 0 or self.__height == 0:
                         return ""
                 else:
@@ -68,4 +67,3 @@ class Rectangle:
                         for _ in range(self.__height):
                                 rectangle = "#" * self.__width + "\n"
                         return rectangle.rstrip()
-

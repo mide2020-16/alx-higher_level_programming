@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Decclare a class Rectangle"""
+"""Declare a class Rectangle"""
 
 
 class Rectangle:
-        """A new class called Rectangle"""
+    """A new class called Rectangle"""
 
-        pass
+    pass

@@ -5,6 +5,12 @@
 class Rectangle:
         """A new class called Rectangle"""
 
+        def __init__(self, width=0, height=0):
+                """Initialzation of class"""
+
+                self.__width = width
+                self.__height = height
+
         @property
         def width(self):
                 """Width Getter"""
@@ -28,7 +34,7 @@ class Rectangle:
                 return self.__height
 
         @height.setter
-        def width(self, height):
+        def height(self, height):
                 """Height Setter"""
 
                 if not isinstance(height, int):
@@ -39,11 +45,6 @@ class Rectangle:
                         self.__height = height
 
 
-        def __init__(self, width=0, height=0):
-                """Initialzation of class"""
-
-                self.__width = 0
-                self.__height = 0
 
         def area(self):
                 """Area of a rectangle"""

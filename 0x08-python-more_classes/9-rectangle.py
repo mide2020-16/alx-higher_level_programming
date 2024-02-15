@@ -5,11 +5,15 @@
 class Rectangle:
         """A new class called Rectangle"""
 
+        number_of_instances = 0
+        print_symbol = "#"
+
         def __init__(self, width=0, height=0):
                 """Initialzation of class"""
 
                 self.__width = width
                 self.__height = height
+                Rectangle.number_of_instances += 1
 
         @property
         def width(self):
@@ -65,7 +69,7 @@ class Rectangle:
                 else:
                         rectangle = ""
                         for _ in range(self.__height):
-                                rectangle = "#" * self.__width + "\n"
+                                rectangle = str(self.print_symbol) * self.__width + "\n"
                         return rectangle
 
         def __repr__(self):
@@ -76,5 +80,26 @@ class Rectangle:
         def __del__(self):
                 """Deleted instance"""
 
+                Rectangle.number_of_instances -= 1
                 print("Bye Rectangle ...")
 
+        @staticmethod
+        def bigger_or_equal(rect_1, rect_2):
+                """Bigger or equal rectangles"""
+
+                if not isinstance(rect_1, Rectangle):
+                        raise TypeError("rect_1 must be an instance of Rectangle")
+                if not isinstance(rect_2, Rectangle):
+                        raise TypeError("rect_1 must be an instance of Rectangle")
+
+                if rect_1.area() >= rect_2.area():
+                        return rect_1
+                else:
+                        return rect_2
+
+        @classmethod
+        def square(cls, size=0):
+                """Square Class method"""
+
+                if cls.width == cls.height == size:
+                        return Rectangle
