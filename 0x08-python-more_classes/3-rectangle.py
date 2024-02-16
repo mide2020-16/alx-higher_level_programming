@@ -63,7 +63,6 @@ class Rectangle:
                 if self.__width == 0 or self.__height == 0:
                         return ""
                 else:
-                        rectangle = ""
                         for _ in range(self.__height):
                                 rectangle = "#" * self.__width + "\n"
-                        return rectangle.rstrip()
+                        return rectangle
