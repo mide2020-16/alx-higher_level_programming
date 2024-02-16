@@ -1,14 +1,25 @@
 # Test with both first and last name
-say_my_name("John", "Doe")
+>>> say_my_name("John", "Doe")
+My name is John Doe
 
 # Test with only first name
-say_my_name("Alice")
+>>> say_my_name("Alice")
+My name is Alice 
 
 # Test with non-string inputs
-say_my_name(123)
-
-say_my_name("John", 123)
-
-say_my_name(None)
-
-say_my_name([], "Doe")
+>>> say_my_name(123)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name("John", 123)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> say_my_name(None)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name([], "Doe")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string

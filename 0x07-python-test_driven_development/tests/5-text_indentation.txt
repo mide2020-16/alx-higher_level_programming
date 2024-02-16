@@ -1,12 +1,25 @@
 # Test with sample text
-text_indentation("Hello. This is a test? Yes: it is.")
+>>> text_indentation("Hello. This is a test? Yes: it is.")
+Hello.
+
+ This is a test?
+
+ Yes:
+ it is.
 
 # Test with empty string
-text_indentation("")
+>>> text_indentation("")
 
 # Test with non-string input
-text_indentation(123)
-
-text_indentation(None)
-
-text_indentation([])
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation([])
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
