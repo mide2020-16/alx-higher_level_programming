@@ -1,0 +1,14 @@
+# Test with both first and last name
+say_my_name("John", "Doe")
+
+# Test with only first name
+say_my_name("Alice")
+
+# Test with non-string inputs
+say_my_name(123)
+
+say_my_name("John", 123)
+
+say_my_name(None)
+
+say_my_name([], "Doe")

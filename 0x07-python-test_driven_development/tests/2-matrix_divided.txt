@@ -1,0 +1,24 @@
+# Test regular matrix division
+matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+
+# Test division by zero
+matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+
+# Test non-integer/divisor inputs
+matrix_divided([[1, 2, 3], [4, 5, 6]], "2")
+
+matrix_divided([[1, 2, 3], [4, 5, 6]], [])
+
+matrix_divided([[1, 2, 3], [4, 5, 6]], {})
+
+matrix_divided([[1, 2, 3], [4, 5, 6]], None)
+matrix_divided([[1, 2, 3], [4, 5, 6]], 2.5)
+
+# Test empty matrix
+matrix_divided([], 2)
+
+# Test non-rectangular matrix
+matrix_divided([[1, 2, 3], [4, 5], [7, 8, 9]], 2)
+
+# Test matrix with non-integer/float elements
+matrix_divided([[1, 2, 'a'], [4, None, 6]], 2)

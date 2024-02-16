@@ -1,0 +1,12 @@
+# Test with sample text
+text_indentation("Hello. This is a test? Yes: it is.")
+
+# Test with empty string
+text_indentation("")
+
+# Test with non-string input
+text_indentation(123)
+
+text_indentation(None)
+
+text_indentation([])
