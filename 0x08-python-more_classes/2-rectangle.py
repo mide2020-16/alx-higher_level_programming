@@ -45,8 +45,6 @@ class Rectangle:
         else:
             self.__height = height
 
-
-
     def area(self):
         """Area of a rectangle"""
 
