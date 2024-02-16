@@ -3,66 +3,66 @@
 
 
 class Rectangle:
-        """A new class called Rectangle"""
+	"""A new class called Rectangle"""
 
-        def __init__(self, width=0, height=0):
-                """Initialzation of class"""
+	def __init__(self, width=0, height=0):
+		"""Initialzation of class"""
 
-                self.__width = width
-                self.__height = height
+		self.__width = width
+		self.__height = height
 
-        @property
-        def width(self):
-                """Width Getter"""
+	@property
+	def width(self):
+		"""Width Getter"""
 
-                return self.__width
+		return self.__width
 
-        @width.setter
-        def width(self, width):
-                """Width Setter"""
+	@width.setter
+	def width(self, width):
+		"""Width Setter"""
 
-                if not isinstance(width, int):
-                        raise TypeError("width must be an integer")
-                elif width < 0:
-                        raise ValueError("width must be >= 0")
-                else:
-                        self.__width = width
-        @property
-        def height(self):
-                """Height getter"""
+		if not isinstance(width, int):
+			raise TypeError("width must be an integer")
+		elif width < 0:
+			raise ValueError("width must be >= 0")
+		else:
+			self.__width = width
 
-                return self.__height
+	@property
+	def height(self):
+		"""Height getter"""
 
-        @height.setter
-        def height(self, height):
-                """Height Setter"""
+		return self.__height
 
-                if not isinstance(height, int):
-                        raise TypeError("height must be an integer")
-                elif height < 0:
-                        raise ValueError("height must be >= 0")
-                else:
-                        self.__height = height
+	@height.setter
+	def height(self, height):
+		"""Height Setter"""
 
-        def area(self):
-                """Area of a rectangle"""
+		if not isinstance(height, int):
+			raise TypeError("height must be an integer")
+		elif height < 0:
+			raise ValueError("height must be >= 0")
+		else:
+			self.__height = height
 
-                return self.__height * self.__width
+	def area(self):
+		"""Area of a rectangle"""
 
-        def perimeter(self):
-                """Perimeter of a Rectangle"""
+		return self.__height * self.__width
 
-                if self.__width == 0 or self.__height == 0:
-                        return 0
-                else:
-                        return 2 * (self.__width + self.__height)
+	def perimeter(self):
+		"""Perimeter of a Rectangle"""
 
-        def __str__(self):
-                """String representation for Rectangle"""
+		if self.__width == 0 or self.__height == 0:
+			return 0
+		else:
+			return 2 * (self.__width + self.__height)
 
-                if self.__width == 0 or self.__height == 0:
-                        return ""
-                else:
-                        for _ in range(self.__height):
-                                rectangle = "#" * self.__width + "\n"
-                        return rectangle
+	def __str__(self):
+		"""String representation for Rectangle"""
+
+		if self.__width == 0 or self.__height == 0:
+			return ""
+		else:
+			for _ in range(self.__height):
+				print("#" * self.__width)
