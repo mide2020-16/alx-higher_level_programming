@@ -70,7 +70,7 @@ class Rectangle:
         else:
             result = ""
             for _ in range(self.__height):
-                result = (self.print_symbol * self.__width)
+                result += (self.print_symbol * self.__width  + "\n")
 
             return result
 
