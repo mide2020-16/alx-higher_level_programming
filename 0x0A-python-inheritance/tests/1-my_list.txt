@@ -1,22 +1,25 @@
-Test case for MyList
+>>> MyList = __import__('1-my_list').MyList
 
-mylist = MyList()
-mylist.extend([5, 2, 7, 1, 9, 12])
+>>> obj = MyList()
 
-print("Original List: ", mylist)
+>>> obj.print_sorted()
+[]
 
-print("Sorted List")
-mylist.print_sorted()
+>>> obj.append(6)
 
-print("Original List after sorting: ", mylist)
+>>> obj.append(1)
 
-mylist.append(3)
-mylist.append(12)
-mylist.append(30)
+>>> obj.append(9)
 
-print("Updated list: ", mylist)
+>>> obj.print_sorted()
+[1, 6, 9]
 
-print("Sorted List after update")
-mylist.print_sorted()
+>>> obj.append("2")
 
-print("Updated List after sorting: ", mylist)
+>>> obj.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+>>> str(obj)
+"[6, 1, 9, '2']"
