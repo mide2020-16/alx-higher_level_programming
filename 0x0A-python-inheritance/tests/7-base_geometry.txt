@@ -1,0 +1,30 @@
+# Test Case for MyList class
+
+# Create an instance of MyList
+my_list = MyList()
+my_list.extend([5, 2, 8, 1, 9])
+
+# Print the original list
+print("Original List:", my_list)
+
+# Call print_sorted method
+print("Sorted List:")
+my_list.print_sorted()
+
+# Verify the original list remains unchanged
+print("Original List (after sorting):", my_list)
+
+# Test appending to the list
+my_list.append(3)
+my_list.append(7)
+my_list.append(4)
+
+# Print the updated list
+print("Updated List:", my_list)
+
+# Call print_sorted method again
+print("Sorted Updated List:")
+my_list.print_sorted()
+
+# Verify the updated list remains unchanged
+print("Updated List (after sorting):", my_list)

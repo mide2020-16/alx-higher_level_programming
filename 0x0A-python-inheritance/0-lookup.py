@@ -1,6 +1,17 @@
 #!/usr/bin/python3
+"""
+Function that lookup an object attribute
+"""
+
 
 def lookup(obj):
-    """Checks for the attribute and methods of "obj" """
+    """
+    Look up an object
 
+    Args:
+        obj (object): The object
+
+    Return:
+        Bool: either true or false
+    """
     return [attr for attr in dir(obj)]
