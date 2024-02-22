@@ -20,12 +20,15 @@ class Student:
         """Convert to json dict"""
 
         if isinstance(attrs, list):
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+            return {attr:\
+                    getattr(self, attr)\
+                        for attr in attrs\
+                            if hasattr(self, attr)}
         else:
             return self.__dict__
 
     def reload_from_json(self, json):
         """Relaod from json"""
 
-        for key, value in json.items:
+        for key, value in json.items():
             setattr(self, key, value)
