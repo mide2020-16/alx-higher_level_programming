@@ -1,0 +1,22 @@
+Test case for MyList
+
+mylist = MyList()
+mylist.extend([5, 2, 7, 1, 9, 12])
+
+print("Original List: ", mylist)
+
+print("Sorted List")
+mylist.print_sorted()
+
+print("Original List after sorting: ", mylist)
+
+mylist.append(3)
+mylist.append(12)
+mylist.append(30)
+
+print("Updated list: ", mylist)
+
+print("Sorted List after update")
+mylist.print_sorted()
+
+print("Updated List after sorting: ", mylist)
