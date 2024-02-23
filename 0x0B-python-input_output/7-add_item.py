@@ -2,8 +2,6 @@
 """
 This script adds all arguments to a Python list, and then saves them to a file.
 """
-
-import json  # Importing the JSON module for handling JSON data
 from sys import argv  # Importing argv to access command line arguments
 
 
@@ -16,3 +14,4 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 with open("add_item.json", 'r+') as f:
     # Saving the command line arguments (excluding the script name) to 'add_item.json'
     save_to_json_file(argv[1:], "add_item.json")
+    load_from_json_file(argv[1])
