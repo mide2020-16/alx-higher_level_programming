@@ -13,15 +13,15 @@ Pascal Triangle for n value
 
 #   def combination(n):
 
-        #   def factorial(n):
-            #     if n == 0:
-            #         return 1
-            #     return n * factorial(n - 1)
+#   def factorial(n):
+#     if n == 0:
+#         return 1
+#     return n * factorial(n - 1)
 
-    #     result = []
-    #     for i in range(n + 1):
-    #         result.append(factorial(n) // (factorial(n - i) * factorial(i)))
-    #     return result
+#     result = []
+#     for i in range(n + 1):
+#         result.append(factorial(n) // (factorial(n - i) * factorial(i)))
+#     return result
 
 #     if not isinstance(n, int):
 #         return f"{n} is not an integer"
