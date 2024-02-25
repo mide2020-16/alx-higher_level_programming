@@ -19,11 +19,15 @@ def compute_metrics(lines):
     """
     total_file_size = 0
     status_counts = defaultdict(int)
+    status_codes = [200, 301, 400, 401, 403, 404, 405, 500]
 
     for line in lines:
         parts = line.split()
         if len(parts) >= 9:
-            status_code = parts[8]
+            if parts[8] == status_codes:
+                status_code = parts[8]
+            else:
+                print()
             file_size = int(parts[-1])
             total_file_size += file_size
             status_counts[status_code] += 1
