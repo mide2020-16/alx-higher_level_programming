@@ -8,7 +8,7 @@ from collections import defaultdict
 
 def compute_metrics(lines):
     """
-    Compute metrics such as total file size and counts of different status codes.
+    Compute metrics such as total file size and counts
 
     Args:
         lines (list): A list of strings representing lines of input data.
@@ -33,7 +33,7 @@ def compute_metrics(lines):
 
 def print_stats(total_file_size, status_count):
     """
-    Print statistics such as total file size and counts of different status codes.
+    Print statistics such as total file size and counts
 
     Args:
         total_file_size (int): The total size of all files processed.
@@ -53,7 +53,7 @@ def main():
     """
     Main function to read input, compute metrics, and print statistics.
 
-    Reads input line by line from standard input, computes metrics such as total
+    Reads input line by line from standard input, computes metrics
     file size and counts of different status codes, and prints statistics every
     10 lines or when interrupted by CTRL + C.
 
