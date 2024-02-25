@@ -43,10 +43,10 @@ def print_stats(total_file_size, status_count):
     Returns:
         None
     """
-    print(f"Total file size: {total_file_size}")
+    print("Total file size: {}".format(total_file_size))
 
     for status_code in sorted(status_count.keys()):
-        print(f"{status_code}: {status_count[status_code]}")
+        print("{}: {}".format(status_code, status_count[status_code]))
 
 
 def main():
