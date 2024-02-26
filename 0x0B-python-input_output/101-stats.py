@@ -5,7 +5,6 @@ File Information
 import sys
 from collections import defaultdict
 
-
 def compute_metrics(lines):
     """
     Compute metrics such as total file size and counts
@@ -24,13 +23,11 @@ def compute_metrics(lines):
     for line in lines:
         parts = line.split()
         if len(parts) >= 9:
-            if parts[8] == status_codes:
-                status_code = parts[8]
-            else:
-                print()
-            file_size = int(parts[-1])
-            total_file_size += file_size
-            status_counts[status_code] += 1
+            status_code = parts[8]
+            if int(status_code) in status_codes:
+                file_size = int(parts[-1])
+                total_file_size += file_size
+                status_counts[status_code] += 1
 
     return total_file_size, status_counts
 
