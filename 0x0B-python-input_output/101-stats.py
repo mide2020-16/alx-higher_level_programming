@@ -17,6 +17,7 @@ def compute_metrics(lines):
     """
     total_file_size = 0
     status_counts = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0, '500': 0}
+    status_count = {}
 
     for line in lines:
         parts = line.split()
@@ -26,8 +27,10 @@ def compute_metrics(lines):
             total_file_size += file_size
             if status_code in status_counts:
                 status_counts[status_code] += 1
+                status_count.keys = status_code
+                status_count.values = status_counts[status_code]
 
-    return total_file_size, status_counts
+    return total_file_size, status_count
 
 def print_statistics(total_file_size, status_counts):
     """
