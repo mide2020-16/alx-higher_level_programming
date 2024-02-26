@@ -24,10 +24,9 @@ def compute_metrics(lines):
         parts = line.split()
         if len(parts) >= 9:
             status_code = parts[8]
-            if int(status_code) in status_codes:
-                file_size = int(parts[-1])
-                total_file_size += file_size
-                status_counts[status_code] += 1
+            file_size = int(parts[-1])
+            total_file_size += file_size
+            status_counts[status_code] += 1
 
     return total_file_size, status_counts
 
