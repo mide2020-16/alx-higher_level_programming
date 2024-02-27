@@ -49,8 +49,9 @@ class Base:
 
         if list_objs is None or len(list_objs) == 0:
             list_objs = []
-
-        filename = f"{cls.__name__}.json"
+        classname = cls.__name__
+        ext = ".json"
+        filename = classname + ext
 
         with open(filename, 'w') as file:
             json_string = cls.to_json_string([obj.to_dictionary()
@@ -105,8 +106,9 @@ class Base:
         Returns:
             list: List of instances loaded from the file.
         """
-
-        filename = f"{cls.__name__}.json"
+        classname = __cls.__name__
+        ext = ".json"
+        filename = classname + ext
 
         try:
             with open(filename, 'r') as file:
