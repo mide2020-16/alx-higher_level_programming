@@ -21,8 +21,8 @@ class Square(Rectangle):
 
         Args:
             size (int): Size of the square.
-            x (int, optional): x-coordinate of the square's position. Defaults to 0.
-            y (int, optional): y-coordinate of the square's position. Defaults to 0.
+            x (int, optional): x-coordinate of the square's position
+            y (int, optional): y-coordinate of the square's position
             id (int, optional): ID of the square. Defaults to None.
         """
 

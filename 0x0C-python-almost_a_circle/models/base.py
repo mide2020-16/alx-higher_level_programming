@@ -7,7 +7,6 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-
 class Base:
     """Base class for geometric shapes."""
 
@@ -53,7 +52,8 @@ class Base:
         filename = f"{cls.__name__}.json"
 
         with open(filename, 'w') as file:
-            json_string = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+            json_string = cls.to_json_string([obj.to_dictionary()\
+            for obj in list_objs])
 
             file.write(json_string)
 
@@ -111,7 +111,8 @@ class Base:
             with open(filename, 'r') as file:
                 json_string = file.read()
                 dictionaries = cls.from_json_string(json_string)
-                instances = [cls.create(**dictionary) for dictionary in dictionaries]
+                instances = [cls.create(**dictionary)\
+                            for dictionary in dictionaries]
                 return instances
 
         except FileNotFoundError:

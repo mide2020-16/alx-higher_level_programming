@@ -23,8 +23,8 @@ class Rectangle(Base):
         Args:
             width (int): Width of the rectangle.
             height (int): Height of the rectangle.
-            x (int, optional): x-coordinate of the rectangle's position. Defaults to 0.
-            y (int, optional): y-coordinate of the rectangle's position. Defaults to 0.
+            x (int, optional): x-coordinate of the rectangle's position
+            y (int, optional): y-coordinate of the rectangle's position
             id (int, optional): ID of the rectangle. Defaults to None.
         """
 
@@ -155,4 +155,6 @@ class Rectangle(Base):
             str: String representation of the Rectangle.
         """
 
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id})\
+            {self.__x}/{self.__y} -\
+            {self.__width}/{self.__height}"
