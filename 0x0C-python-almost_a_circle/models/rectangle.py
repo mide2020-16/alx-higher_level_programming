@@ -16,40 +16,6 @@ class Rectangle(Base):
         y (int): y-coordinate of the rectangle's position.
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Initialize a Rectangle instance.
-
-        Args:
-            width (int): Width of the rectangle.
-            height (int): Height of the rectangle.
-            x (int, optional): x-coordinate of the rectangle's position
-            y (int, optional): y-coordinate of the rectangle's position
-            id (int, optional): ID of the rectangle. Defaults to None.
-        """
-
-        super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-
-    def to_dictionary(self):
-        """
-        Convert Rectangle attributes to a dictionary.
-
-        Returns:
-            dict: Dictionary containing attributes of the Rectangle.
-        """
-
-        return {
-            'id': self.id,
-            'width': self.__width,
-            'height': self.__height,
-            'x': self.__x,
-            'y': self.__y
-        }
-
     @property
     def width(self):
         return self.__width
@@ -101,6 +67,40 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
 
         self.__y = value
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Initialize a Rectangle instance.
+
+        Args:
+            width (int): Width of the rectangle.
+            height (int): Height of the rectangle.
+            x (int, optional): x-coordinate of the rectangle's position
+            y (int, optional): y-coordinate of the rectangle's position
+            id (int, optional): ID of the rectangle. Defaults to None.
+        """
+
+        super().__init__(id)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+
+    def to_dictionary(self):
+        """
+        Convert Rectangle attributes to a dictionary.
+
+        Returns:
+            dict: Dictionary containing attributes of the Rectangle.
+        """
+
+        return {
+            'id': self.id,
+            'width': self.__width,
+            'height': self.__height,
+            'x': self.__x,
+            'y': self.__y
+        }
 
     def area(self):
         """
