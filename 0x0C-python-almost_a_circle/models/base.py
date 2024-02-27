@@ -106,7 +106,7 @@ class Base:
         Returns:
             list: List of instances loaded from the file.
         """
-        classname = __cls.__name__
+        classname = cls.__name__
         ext = ".json"
         filename = classname + ext
 

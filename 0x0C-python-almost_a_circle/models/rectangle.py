@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-A rectangle class"""
+"""A rectangle class"""
 Base = __import__('base').Base
 
 
