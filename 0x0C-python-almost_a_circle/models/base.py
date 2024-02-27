@@ -53,7 +53,7 @@ class Base:
 
         with open(filename, 'w') as file:
             json_string = cls.to_json_string([obj.to_dictionary()\
-            for obj in list_objs])
+                                              for obj in list_objs])
 
             file.write(json_string)
 
@@ -112,7 +112,7 @@ class Base:
                 json_string = file.read()
                 dictionaries = cls.from_json_string(json_string)
                 instances = [cls.create(**dictionary)\
-                            for dictionary in dictionaries]
+                             for dictionary in dictionaries]
                 return instances
 
         except FileNotFoundError:
