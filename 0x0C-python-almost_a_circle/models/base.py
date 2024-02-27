@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
-Base Class for Geometric shapes
-"""
+Base Class for Geometric shapes"""
 import json
-from models.rectangle import Rectangle
-from models.square import Square
 
 
 class Base:
-    """Base class for geometric shapes."""
+    """Base class for geometric shapes.
+
+        __nb_objects
+        constructor
+    """
 
     __nb_objects = 0
 
@@ -33,7 +34,7 @@ class Base:
             str: JSON string representing the list of dictionaries.
         """
 
-        if not list_dictionaries:
+        if not list_dictionaries or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -46,7 +47,7 @@ class Base:
             list_objs (list): List of objects to be saved.
         """
 
-        if list_objs is None:
+        if list_objs is None or len(list_objs) == 0:
             list_objs = []
 
         filename = f"{cls.__name__}.json"
@@ -69,10 +70,10 @@ class Base:
             list: List of dictionaries.
         """
 
-        if not json_string:
+        if not json_string or len(json_string) == 0:
             return []
 
-        return json.loads(json_string)
+        return list(json.loads(json_string))
 
     @classmethod
     def create(cls, **dictionary):
@@ -86,10 +87,10 @@ class Base:
             object: Instance of the class.
         """
 
-        if cls.__name__ == 'Rectangle':
-            dum_instance = Rectangle(1, 1)
-        elif cls.__name__ == 'Square':
-            dum_instance = Square(1)
+        if cls.__name__ == "Rectangle":
+            dum_instance = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dum_instance = cls(1)
         else:
             raise ValueError("Unsupported Geometry")
 
@@ -116,4 +117,6 @@ class Base:
                 return instances
 
         except FileNotFoundError:
+            return []
+        except Exception:
             return []
