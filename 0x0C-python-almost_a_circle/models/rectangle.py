@@ -2,7 +2,7 @@
 """
 A rectangle class
 """
-from models.base import Base
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
@@ -154,7 +154,6 @@ class Rectangle(Base):
         Returns:
             str: String representation of the Rectangle.
         """
-
-        return f"[Rectangle] ({self.id})\
-            {self.__x}/{self.__y} -\
-            {self.__width}/{self.__height}"
+        rect = "[Rectangle]" + " (" + self.id + ") " + self.x + "/" + self.y
+        rect1 = "-" + self.width + "/" + self.height
+        return rect + rect1
