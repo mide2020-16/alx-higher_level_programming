@@ -16,12 +16,19 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Property for retrieving the width of the rectangle."""
+        """
+        Property for retrieving the width of the rectangle.
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter for setting the width of the rectangle."""
+        """
+        Setter for setting the width of the rectangle.
+
+        Args:
+            value (int): any int value
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -31,12 +38,19 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Property for retrieving the height of the rectangle."""
+        """
+        Property for retrieving the height of the rectangle.
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter for setting the height of the rectangle."""
+        """
+        Setter for setting the height of the rectangle.
+
+        Args:
+            value (int): any int value
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -46,12 +60,19 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Property for retrieving the x-coordinate of the rectangle."""
+        """
+        Property for retrieving the x-coordinate of the rectangle.
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
-        """Setter for setting the x-coordinate of the rectangle."""
+        """
+        Setter for setting the x-coordinate of the rectangle.
+
+        Args:
+            value (int): any int value
+        """
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         elif value <= 0:
@@ -61,12 +82,19 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Property for retrieving the y-coordinate of the rectangle."""
+        """
+        Property for retrieving the y-coordinate of the rectangle.
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
-        """Setter for setting the y-coordinate of the rectangle."""
+        """
+        Setter for setting the y-coordinate of the rectangle.
+
+        Args:
+            value (int): any int value
+        """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         elif value <= 0:
@@ -122,7 +150,6 @@ class Rectangle(Base):
         """Display the rectangle."""
         for _ in range(self.__y):
             print()
-
         for _ in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
