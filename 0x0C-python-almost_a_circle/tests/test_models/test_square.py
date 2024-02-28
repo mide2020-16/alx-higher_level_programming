@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A test script utilizing unittest module to test the feature of a class"""
 import unittest
-from models.square import Square
+Square = __import__('square').Square
 
 
 class Test_Square(unittest.TestCase):

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A script that performs unit testing using the unittest module"""
 import unittest
-from models.rectangle import Rectangle
+Rectangle = __import__('rectangle').Rectangle
 
 
 class TestRectangle(unittest.TestCase):
