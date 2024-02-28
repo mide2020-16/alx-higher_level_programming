@@ -16,6 +16,17 @@ class Rectangle(Base):
         y (int): y-coordinate of the rectangle's position.
     """
 
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Initialize a Rectangle instance.
+
+        Args:
+            width (int): Width of the rectangle.
+            height (int): Height of the rectangle.
+            x (int, optional): x-coordinate of the rectangle's position
+            y (int, optional): y-coordinate of the rectangle's position
+            id (int, optional): ID of the rectangle. Defaults to None.
+        """
     @property
     def width(self):
         """
@@ -103,18 +114,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
 
         self.__y = value
-
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Initialize a Rectangle instance.
-
-        Args:
-            width (int): Width of the rectangle.
-            height (int): Height of the rectangle.
-            x (int, optional): x-coordinate of the rectangle's position
-            y (int, optional): y-coordinate of the rectangle's position
-            id (int, optional): ID of the rectangle. Defaults to None.
-        """
 
         super().__init__(id)
         self.__width = width
