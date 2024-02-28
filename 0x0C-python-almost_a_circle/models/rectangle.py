@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""A rectangle class"""
+"""
+A Rectangle class for Geometric Shapes
+"""
 Base = __import__('base').Base
 
 
