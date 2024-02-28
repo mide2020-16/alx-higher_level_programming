@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-A Square shape and class
-"""
-from models.rectangle import Rectangle
+"""A Square shape and class"""
+Rectangle = __import__('rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -14,6 +12,7 @@ class Square(Rectangle):
         x (int): x-coordinate of the square's position.
         y (int): y-coordinate of the square's position.
     """
+
 
     def __init__(self, size, x=0, y=0, id=None):
         """

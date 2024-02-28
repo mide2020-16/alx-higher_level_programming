@@ -16,12 +16,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """widht property"""
+        """Property for retrieving the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """width setter"""
+        """Setter for setting the width of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -31,12 +31,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """height prop"""
+        """Property for retrieving the height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """height setter"""
+        """Setter for setting the height of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -46,12 +46,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """x prop"""
+        """Property for retrieving the x-coordinate of the rectangle."""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """x setter"""
+        """Setter for setting the x-coordinate of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         elif value <= 0:
@@ -61,12 +61,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """y prop"""
+        """Property for retrieving the y-coordinate of the rectangle."""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """y setter"""
+        """Setter for setting the y-coordinate of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         elif value <= 0:
@@ -120,7 +120,6 @@ class Rectangle(Base):
 
     def display(self):
         """Display the rectangle."""
-
         for _ in range(self.__y):
             print()
 
@@ -160,6 +159,6 @@ class Rectangle(Base):
         Returns:
             str: String representation of the Rectangle.
         """
-        rect = "[Rectangle]" + " (" + self.id + ") " + self.x + "/" + self.y
-        rect1 = "-" + self.width + "/" + self.height
+        rect = "[Rectangle]" + " (" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y)
+        rect1 = "-" + str(self.__width) + "/" + str(self.__height)
         return rect + rect1
