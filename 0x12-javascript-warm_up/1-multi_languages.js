@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
-let myVar = "Javascript is amazing";
+const lineA = 'C is fun\n';
+const lineB = 'Python is cool\n';
+const lineC = 'Javascript is amazing\n';
 
-console.log(myVar);
-
+console.log(lineA, lineB, lineC);
