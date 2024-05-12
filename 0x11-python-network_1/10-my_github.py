@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Takes Github credentials and uses GITHUB API to dispaly id"""
 
-import requests # type: ignore
+import requests  # type: ignore
 import sys
 
 if __name__ == "__main__":
@@ -14,6 +14,6 @@ if __name__ == "__main__":
         with requests.get(url, auth=(username, password)) as resp:
             if resp.status_code == 200:
                 json_obj = resp.json()
-                print(json_obj['id'])
+                print(json_obj["id"])
             else:
                 print(None)
