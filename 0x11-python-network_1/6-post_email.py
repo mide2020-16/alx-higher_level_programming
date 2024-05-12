@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A script that makes a post request with requests library"""
 
-import requests #type: ignore
+import requests  # type: ignore
 import sys
 
 if __name__ == "__main__":
