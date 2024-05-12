@@ -4,6 +4,7 @@
 import urllib
 import sys
 import urllib.error
+import urllib.request
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
