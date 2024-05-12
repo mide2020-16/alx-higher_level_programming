@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Takes Github credentials and uses GITHUB API to dispaly id"""
+"""List commits for the 10 most recent commits made by developers"""
 
 import requests  # type: ignore
 import sys
