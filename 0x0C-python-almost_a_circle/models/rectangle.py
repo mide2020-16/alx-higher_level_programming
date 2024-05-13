@@ -27,6 +27,12 @@ class Rectangle(Base):
             y (int, optional): y-coordinate of the rectangle's position
             id (int, optional): ID of the rectangle. Defaults to None.
         """
+        super().__init__(id)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+        
     @property
     def width(self):
         """
@@ -115,11 +121,7 @@ class Rectangle(Base):
 
         self.__y = value
 
-        super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+
 
     def to_dictionary(self):
         """

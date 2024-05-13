@@ -1,7 +1,4 @@
 #!/usr/bin/node
+/*Multi languages*/
 
-const lineA = 'C is fun\n';
-const lineB = 'Python is cool\n';
-const lineC = 'Javascript is amazing\n';
-
-console.log(lineA, lineB, lineC);
+console.log('C is fun\nPython is cool\nJavascript is amazing');
